@@ -54,6 +54,40 @@ Delete User: DELETE /users/:id
 
 
 Create WalletAddress: POST /wallet-address
+```bash
+
+{
+    "message": "Wallet created successfully",
+    "status": "success",
+    "data": {
+        "user_id": "5",
+        "address": "New wakdderg",
+        "id": 17,
+        "created_at": "2024-06-04T21:26:14.912Z"
+    }
+}
+```
+
+Get All WalletAddresses: GET /wallet-address
+
+List of Wallets
+
+Get One WalletAddress: GET /wallet-address/:id
+```bash
+
+{
+    "message": "Wallet details fetched successfully",
+    "status": "success",
+    "data": {
+        "id": 2,
+        "user_id": 2,
+        "address": "iqfakfafnamnvkjvksadgjagjadg",
+        "created_at": "2024-06-04T19:38:33.418Z"
+    }
+}
+```
+
+Update WalletAddress: PATCH /wallet-address/:id
 
 ```bash
 {
@@ -61,13 +95,6 @@ Create WalletAddress: POST /wallet-address
     "address": "NAdkfakfafaaafafafafkjfalfkalfafg"
 }
 ```
-
-Get All WalletAddresses: GET /wallet-address
-
-Get One WalletAddress: GET /wallet-address/:id
-
-Update WalletAddress: PATCH /wallet-address/:id
-
 Delete WalletAddress: DELETE /wallet-address/:id
 
 ## Description
