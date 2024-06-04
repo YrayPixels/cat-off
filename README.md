@@ -5,6 +5,26 @@ The application was built with NestJs to perform a simple crud on creating a use
 THe end points available are listed below
 All Write Request Parameters are to be sent in JSON String and responses are in JSON also.
 
+Postgre SQL
+```bash
+
+CREATE TABLE Users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE WalletAddress (
+    id SERIAL PRIMARY KEY,
+    userId INT NOT NULL,
+    address VARCHAR(100) UNIQUE NOT NULL,
+    FOREIGN KEY (userId) REFERENCES Users(id)
+);
+
+```
+
+
 Create User: POST /users
 Params:
 ```bash
