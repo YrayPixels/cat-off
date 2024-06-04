@@ -55,6 +55,13 @@ Delete User: DELETE /users/:id
 
 Create WalletAddress: POST /wallet-address
 
+```bash
+{
+    "user_id": "5",
+    "address": "NAdkfakfafaaafafafafkjfalfkalfafg"
+}
+```
+
 Get All WalletAddresses: GET /wallet-address
 
 Get One WalletAddress: GET /wallet-address/:id

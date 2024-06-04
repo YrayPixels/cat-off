@@ -45,7 +45,7 @@ export class WalletAddressController {
             }
 
         } catch (e) {
-            throw new InternalServerErrorException()
+            throw new InternalServerErrorException("Error creating wallet", { cause: new Error(), description: "Error creating wallet" })
         }
     }
 
@@ -62,7 +62,7 @@ export class WalletAddressController {
             }
 
         } catch (e) {
-            throw new InternalServerErrorException("Error updating wallet", e.message)
+            throw new InternalServerErrorException("Error updating wallet", { cause: new Error(), description: "Error updating wallet" })
         }
 
     }
